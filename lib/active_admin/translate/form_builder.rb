@@ -17,7 +17,7 @@ module ActiveAdmin
         else
           html = "".html_safe
         end
-        html << template.content_tag(:div, class: "activeadmin-translations #{ translate_id }") do
+        html << template.content_tag(:div, class: "activeadmin-translate #{ translate_id }") do
           locale_tabs << locale_fields(name, block) << tab_script
         end
         template.concat(html) unless self.respond_to?(:form_buffers)
